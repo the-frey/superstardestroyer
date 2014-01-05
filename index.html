@@ -103,13 +103,13 @@
   <script type="text/x-handlebars" data-template-name='release'>
     <div class='release'>
       <img {{bind-attr src='artwork'}} class='release_image' />
-      <h2 class='red_text'><span class='script'>{{name}}</span></h2>
+      <h2 class='red_text'><span class='extra_script'>{{name}}</span></h2>
       <p>Released: {{release_date}}, Cat: {{cat}}.</p>
       <hr>
       <h5>Download or purchase physical copies:</h5>
       <p>Get <a {{bind-attr href='link'}} target='_blank' class='red_hover'>{{name}} &rarr;</a></p>
       <hr>
-      {{#link-to 'band' band.id classNames='red_hover'}}&larr; Back to {{band.name}}{{/link-to}}
+      {{#link-to 'band' band.id classNames='back_release_link'}}&larr; Back to {{band.name}}{{/link-to}}
     </div>
   </script>
 

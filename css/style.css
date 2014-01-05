@@ -25,6 +25,18 @@
 
 }
 
+@font-face {
+    font-family: 'the_best_nightregular';
+    src: url('the_best_night-webfont.eot');
+    src: url('the_best_night-webfont.eot?#iefix') format('embedded-opentype'),
+         url('the_best_night-webfont.woff') format('woff'),
+         url('the_best_night-webfont.ttf') format('truetype'),
+         url('the_best_night-webfont.svg#the_best_nightregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 /******************** MAIN STYLES ********************/
 
 html {
@@ -51,6 +63,10 @@ div.header {
   text-align:center;
 }
 
+h2.large_text {
+  font-size:3.8em;
+}
+
 /*
   Anchor transitions 
 */
@@ -62,7 +78,7 @@ a {
   transition:color 0.2s ease-in;
 }
 
-a.back_band_link {
+a.back_band_link, a.back_release_link {
   padding:5px;
   border:2px solid #428BCA;
   background:rgba(66,139,202,0.1);
@@ -73,6 +89,12 @@ a.back_band_link {
 }
 
 a.back_band_link:hover {
+  color:#FDFDFD;
+  text-decoration:none;
+  background:rgb(66, 139, 202);
+}
+
+a.back_release_link:hover {
   color:#FDFDFD;
   text-decoration:none;
   background:rgb(66, 139, 202);
@@ -115,6 +137,11 @@ a.red_hover:hover {
 
 span.script {
   font-family: 'imagination_stationregular', helvetica, arial, sans-serif;
+}
+
+span.extra_script {
+  font-size:1.4em;
+  font-family: 'the_best_nightregular', helvetica, arial, sans-serif;
 }
 
 span.bebas {
