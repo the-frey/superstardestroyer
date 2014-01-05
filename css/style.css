@@ -1,0 +1,200 @@
+
+/******************** FONTS ********************/
+
+@font-face {
+    font-family: 'bebasregular';
+    src: url('BEBAS___-webfont.eot');
+    src: url('BEBAS___-webfont.eot?#iefix') format('embedded-opentype'),
+         url('BEBAS___-webfont.woff') format('woff'),
+         url('BEBAS___-webfont.ttf') format('truetype'),
+         url('BEBAS___-webfont.svg#bebasregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'imagination_stationregular';
+    src: url('imagination_station-webfont.eot');
+    src: url('imagination_station-webfont.eot?#iefix') format('embedded-opentype'),
+         url('imagination_station-webfont.woff') format('woff'),
+         url('imagination_station-webfont.ttf') format('truetype'),
+         url('imagination_station-webfont.svg#imagination_stationregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/******************** MAIN STYLES ********************/
+
+html {
+  background:url('SSD_silhouette_smaller.png')no-repeat;
+  background-position:center;
+  min-height:720px;
+  width:100%;
+}
+
+body.ember-application {
+  background:rgba(253,253,253,0.8);
+  min-height:720px;
+  width:90%;
+  margin:0 auto;
+}
+
+ul li {
+  list-style:none;
+}
+
+div.header {
+  background:#333;
+  color:#FDFDFD;
+  text-align:center;
+}
+
+/*
+  Anchor transitions 
+*/
+
+a {
+  -webkit-transition:color 0.2s ease-in;
+  -moz-transition:color 0.2s ease-in;
+  -o-transition:color 0.2s ease-in;
+  transition:color 0.2s ease-in;
+}
+
+a.back_band_link {
+  padding:5px;
+  border:2px solid #428BCA;
+  background:rgba(66,139,202,0.1);
+  -webkit-border-radius:2px;
+  -moz-border-radius:2px;
+  -o-border-radius:2px;
+  border-radius:2px;
+}
+
+a.back_band_link:hover {
+  color:#FDFDFD;
+  text-decoration:none;
+  background:rgb(66, 139, 202);
+}
+
+/*
+  Main Nav 
+*/
+
+.left-hand-nav {
+  background:rgb(250,250,250);
+  padding:10px;
+  -webkit-border-radius:2px;
+  -moz-border-radius:2px;
+  -o-border-radius:2px;
+  border-radius:2px;
+}
+
+.left-hand-nav ul {
+  list-style:none;
+}
+
+.left-hand-nav ul li a {
+  font-size:1.5em;
+}
+
+.left-hand-nav ul li a:hover {
+  color:rgb(201, 20, 13);
+  text-decoration:none;
+}
+
+a.red_hover:hover {
+  color:rgb(201, 20, 13);
+  text-decoration:none;
+}
+
+/*
+  Font styles 
+*/
+
+span.script {
+  font-family: 'imagination_stationregular', helvetica, arial, sans-serif;
+}
+
+span.bebas {
+  font-family: 'bebasregular', helvetica, arial, sans-serif
+}
+
+.red_text {
+  color:rgb(201, 20, 13);
+}
+
+/*
+  Template containers 
+*/
+
+div.index {
+  /*padding:10px;*/
+}
+
+div.about {
+  /*padding:10px;*/
+}
+
+div.bands_index {
+  /*padding:10px;*/
+}
+
+div.band {
+
+}
+
+div.releases_index {
+  /*padding:10px;*/
+}
+
+div.release {
+
+}
+
+/*
+  Images
+*/
+
+img.band_image, img.release_image {
+  width:40%;
+  float:right;
+}
+
+img.band_thumbnail {
+  width:60px;
+}
+
+/*
+  UL styles
+*/
+
+ul.band_list {
+  margin-left:0;
+  padding-left:0;
+}
+
+ul.band_release_list {
+  margin-left:0;
+  padding-left:0;
+}
+
+ul.release_list {
+  margin-left:0;
+  padding-left:0;
+}
+
+ul.band_list li {
+  margin-bottom:5px;
+}
+
+/******************** CLEAR ********************/
+
+.pull-left {
+  float:left;
+}
+
+div.clear {
+  clear:both;
+}

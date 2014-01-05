@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Superstar Destroyer Records</title>
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="shortcut icon" href="css/ssd.ico" />
+</head>
+<body>
+  <script type="text/x-handlebars" data-template-name='application'>
+    <div class='container'>
+      <div class='row'>
+        <div class="header">
+          <h1><span class='bebas'>Superstar  Destroyer  Records</span></h1>
+        </div>
+      </div>
+
+      <div class='row'>
+        <div class='col-md-4 left-hand-nav'>
+          <nav>
+            <ul>
+              <li>{{#link-to 'index'}}Home{{/link-to}}</li>
+              <li>{{#link-to 'about'}}About{{/link-to}}</li>
+              <li>{{#link-to 'bands'}}Bands{{/link-to}}</li>
+              <li>{{#link-to 'releases'}}Releases{{/link-to}}</li>
+              <li><a href='http://shop.superstardestroyer.co.uk/'>Store</a></li>
+              <li><a href='https://www.facebook.com/ssdrecords' target='_blank'>Facebook</a></li>
+              <li><a href='https://www.twitter.com/ssdrecords' target='_blank'>Twitter</a></li>        
+            </ul>
+          </nav>
+        </div>
+
+        <div class='col-md-8'>
+          {{outlet}}
+        </div>
+      </div>
+    </div>
+  </script>
+
+  <script type="text/x-handlebars" data-template-name='index'>
+    <div class='index'>
+      <h2 class='red_text'><span class='script'>Welcome to Superstar Destroyer Records</span></h2>
+      <p>Behold! Our latest release:</p>
+      <iframe style="border: 0; width: 100%; height: 120px;" src="http://bandcamp.com/EmbeddedPlayer/album=297978849/size=medium/bgcol=ffffff/linkcol=de270f/transparent=true/" seamless><a href="http://superstardestroyer.bandcamp.com/album/real-ale-and-model-rail-the-lonely-mans-guide-to-not-committing-suicide">Real Ale and Model Rail: The Lonely Man&#39;s Guide to Not Committing Suicide by Alpha Male Tea Party</a></iframe>
+    </div>
+  </script>
+
+  <script type="text/x-handlebars" data-template-name='about'>
+    <div class='about'>
+      <h2 class='red_text'><span class='script'>About</span></h2>
+      <p>
+        The label was begun sometime in 2010 by Jake, Anderson, Alex and Tom when Jake told people that we had started one. After some pretty ramshackle releases, Jonny joined the team to help out with techy stuff, building the original SSD website. 
+        <br><br>
+        Nowadays, the label is mostly run by Alex, with a bit of help and advice from the others. Tom and Anderson work in London (Anderson once complained of problems with mirror balls, we still do not know what that has to do with programming), Jonny is a robotics engineer for Dyson, Alex is a music journalist and programmer and Jake is a science fiction author studying a postgrad I School degree at UC Berkeley in California. Far out.
+        <br><br>
+        We have seen our bands in our favourite print magazines, support people like Meursault, Tall Ships and Vessels, put on Trojan Horse's album launch and hung out with some real cool dudes. It's been awesome. 
+      </p>
+    </div>
+  </script>
+
+  <script type="text/x-handlebars" data-template-name='bands/index'>
+    <div class='bands_index'>
+      <h2 class='red_text'><span class='script'>Bands</span></h2>
+      <p>Here is a list of all the bands on the label, past and present.</p>
+      <ul class='band_list'>
+        {{#each}}
+          <li>
+            {{#link-to 'band' this classNames='red_hover'}} 
+              <img {{bind-attr src='image'}} class='band_thumbnail' /> {{name}}
+            {{/link-to}}
+          </li>
+        {{/each}}
+      </ul>
+    </div>
+  </script>
+
+  <script type="text/x-handlebars" data-template-name='band'>
+    <div class='band'>
+      <img {{bind-attr src='image'}} class='band_image' />
+      <h2 class='red_text'><span class='script'>{{name}}</span></h2>
+      <p>{{bio}}</p>
+      <ul class='band_release_list'>
+      <h6>SSD Discography:</h6>
+      {{#each release in releases}}
+        <li>
+          {{#link-to 'release' release classNames='red_hover'}} 
+            {{release.name}}
+          {{/link-to}}
+        </li>
+      {{else}}
+        <li>No releases to show for this artist.</li>
+      {{/each}}
+      </ul>
+      {{#link-to 'bands' classNames='back_band_link'}}&larr; Back to bands{{/link-to}}
+    </div>
+  </script>
+
+  <script type="text/x-handlebars" data-template-name='release'>
+    <div class='release'>
+      <img {{bind-attr src='artwork'}} class='release_image' />
+      <h2 class='red_text'><span class='script'>{{name}}</span></h2>
+      <p>Released: {{release_date}}, Cat: {{cat}}.</p>
+      <hr>
+      <h5>Download or purchase physical copies:</h5>
+      <p>Get <a {{bind-attr href='link'}} target='_blank' class='red_hover'>{{name}} &rarr;</a></p>
+      <hr>
+      {{#link-to 'band' band.id classNames='red_hover'}}&larr; Back to {{band.name}}{{/link-to}}
+    </div>
+  </script>
+
+  <script type="text/x-handlebars" data-template-name='releases/index'>
+    <div class='releases_index'>
+      <h2 class='red_text'><span class='script'>Releases</span></h2>
+      <p>Here is a list of all the releases on the label, past and present.</p>
+      <ul class='release_list'>
+        {{#each}}
+          <li>
+            {{#link-to 'release' this classNames='red_hover'}} 
+              <em>{{cat}}</em> - <strong>{{name}}</strong>
+            {{/link-to}}
+          </li>
+        {{/each}}
+      </ul>
+    </div>
+  </script>
+
+  <script src="js/libs/jquery-1.10.2.js"></script>
+  <script src="js/libs/bootstrap.min.js"></script>
+  <script src="js/libs/handlebars-1.1.2.js"></script>
+  <script src="js/libs/ember-1.2.0.js"></script>
+  <script src="js/libs/ember-data.min.js"></script>
+  <script src="js/app.js"></script>
+  <!-- to activate the test runner, add the "?test" query string parameter -->
+  <script src="tests/runner.js"></script>
+</body>
+</html>
