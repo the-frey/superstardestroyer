@@ -238,6 +238,15 @@ ul.band_list li {
   margin-bottom:5px;
 }
 
+div.display-inline nav ul {
+  text-align:center;
+}
+
+div.display-inline nav ul li {
+  display:inline !important;
+  margin:0 5px;
+}
+
 /******************** CLEAR ********************/
 
 .pull-left {

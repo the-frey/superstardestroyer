@@ -18,17 +18,34 @@
         <div class="header">
           <h1><span class='bebas'>Superstar  Destroyer  Records</span></h1>
         </div>
-      </div>
-
-      <div class='row'>
-        <div class='col-md-4 left-hand-nav'>
+        <div class="left-hand-nav display-inline">
           <nav>
             <ul>
               <li>{{#link-to 'index'}}Home{{/link-to}}</li>
               <li>{{#link-to 'about'}}About{{/link-to}}</li>
               <li>{{#link-to 'bands'}}Bands{{/link-to}}</li>
               <li>{{#link-to 'releases'}}Releases{{/link-to}}</li>
-              <li><a href='http://shop.superstardestroyer.co.uk/'>Store</a></li>
+              <li><a href='http://shop.superstardestroyer.co.uk/'>Store</a></li>      
+            </ul>
+          </nav>
+        </div>
+      </div>
+
+      <div class='row'>
+        <div class='col-md-4'>
+          <h2 class='red_text'><span class='script'>Latest release</span></h2>
+          <iframe style="border: 0; width: 300px; height: 420px;" src="http://bandcamp.com/EmbeddedPlayer/album=297978849/size=large/bgcol=ffffff/linkcol=de270f/notracklist=true/transparent=true/" seamless><a href="http://superstardestroyer.bandcamp.com/album/real-ale-and-model-rail-the-lonely-mans-guide-to-not-committing-suicide">Real Ale and Model Rail: The Lonely Man&#39;s Guide to Not Committing Suicide by Alpha Male Tea Party</a></iframe>
+        </div>
+
+        <div class='col-md-8'>
+          {{outlet}}
+        </div>
+      </div>
+
+      <div class='row'>
+        <div class="display-inline">
+          <nav>
+            <ul>
               <li>
                 <a href='https://www.facebook.com/ssdrecords' class='socialico' target='_blank'>f</a>
                 <a href='https://www.twitter.com/ssdrecords' class='socialico' target='_blank'>l</a>
@@ -37,10 +54,6 @@
             </ul>
           </nav>
         </div>
-
-        <div class='col-md-8'>
-          {{outlet}}
-        </div>
       </div>
     </div>
   </script>
@@ -48,8 +61,7 @@
   <script type="text/x-handlebars" data-template-name='index'>
     <div class='index'>
       <h2 class='red_text'><span class='script'>Welcome to Superstar Destroyer Records</span></h2>
-      <p>Behold! Our latest release:</p>
-      <iframe style="border: 0; width: 100%; height: 120px;" src="http://bandcamp.com/EmbeddedPlayer/album=297978849/size=medium/bgcol=ffffff/linkcol=de270f/transparent=true/" seamless><a href="http://superstardestroyer.bandcamp.com/album/real-ale-and-model-rail-the-lonely-mans-guide-to-not-committing-suicide">Real Ale and Model Rail: The Lonely Man&#39;s Guide to Not Committing Suicide by Alpha Male Tea Party</a></iframe>
+      <p></p>
     </div>
   </script>
 
