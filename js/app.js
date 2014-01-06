@@ -158,7 +158,7 @@ App.Release.FIXTURES = [
     release_date:'10 December 2012',
     artwork:'http://f0.bcbits.com/img/a1464082123_10.jpg',
     link:'http://superstardestroyer.bandcamp.com/album/slept-and-did-not-sleep',
-    cat:'SSDCD08/SSDDL13',
+    cat:'SSDCD09/SSDDL13',
     band:6
   },
   {
@@ -176,7 +176,7 @@ App.Release.FIXTURES = [
     release_date:'02 November 2010',
     artwork:'http://f0.bcbits.com/img/a3690111613_10.jpg',
     link:'http://superstardestroyer.bandcamp.com/album/golden-snake-single',
-    cat:'SSDDL03',
+    cat:'SSDCD01/SSDDL03',
     band:3
   },
   {
@@ -212,7 +212,7 @@ App.Release.FIXTURES = [
     release_date:'09 May 2011',
     artwork:'http://f0.bcbits.com/img/a3544605574_10.jp7',
     link:'http://superstardestroyer.bandcamp.com/album/now-i-am-twenty',
-    cat:'SSDDL07',
+    cat:'SSDCD05/SSDDL07',
     band:7
   },
   {
@@ -225,6 +225,13 @@ App.Release.FIXTURES = [
     band:7
   }
 ];
+
+App.ApplicationController = Ember.Controller.extend({
+  year: function(){
+    var d = new Date();
+    return d.getFullYear();
+  }.property()
+});
 
 App.IndexRoute = Ember.Route.extend({
   model: function() {   
