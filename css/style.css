@@ -134,6 +134,7 @@ a.socialico {
 
 .left-hand-nav {
   background:rgba(250,250,250,0.8);
+  padding-left:0;
   padding:10px;
   -webkit-border-radius:2px;
   -moz-border-radius:2px;
@@ -224,6 +225,10 @@ img.band_thumbnail {
 /*
   UL styles
 */
+
+ul.bottom_social_links {
+  padding-left:0;
+}
 
 ul.band_list {
   margin-left:0;
